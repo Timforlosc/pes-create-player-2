@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Générateur PES 21</title>
+  <!-- Charge le CSS minifié -->
+  <link rel="stylesheet" href="assets/index-7a3b1.css">
+</head>
+<body>
+  <h1>Générateur de Joueurs PES 21</h1>
+
+  <section id="options">
+    <h2>Paramètres de génération</h2>
+    <label>Overall min :
+      <input id="min" type="number" value="60" min="40" max="99">
+    </label>
+    <label>Overall max :
+      <input id="max" type="number" value="80" min="40" max="99">
+    </label>
+    <label>Nombre de joueurs :
+      <input id="count" type="number" value="22" min="1" max="800">
+    </label>
+    <p>Sélectionnez les nationalités :</p>
+    <div id="countryBox"></div>
+    <p>Répartition des postes :</p>
+    <div id="posBox"></div>
+    <button id="gen">Générer</button>
+    <button id="zip" disabled>Télécharger ZIP</button>
+  </section>
+
+  <section id="preview">
+    <h2>Aperçu</h2>
+    <pre id="out">Aucun joueur généré…</pre>
+  </section>
+
+  <!-- Charge le bundle JavaScript principal qui inclut
+       config.js, nameGenerator.js, exportSeparated.js et dict_names.json -->
+  <script type="module" src="assets/index-7a3b1.js"></script>
+</body>
+</html>
